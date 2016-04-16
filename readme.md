@@ -8,7 +8,7 @@ Data represents binary which is converted to morse code in the process and then 
 ##Usage
 ######Constructor
 
-```
+```javascript
 var red = [255, 0, 0, 1]; // Color -> red -> 1
 var blue = [0, 0, 255, 1]; // Color -> blue -> 0
 var reader = MickyMorse(new MMData(red, blue, red, red, red)); // Returns 'a'
@@ -16,7 +16,7 @@ var reader = MickyMorse(new MMData(red, blue, red, red, red)); // Returns 'a'
 
 ######Feed and Poop
 
-```
+```javascript
 var red = [255, 0, 0, 1]; // Color -> red -> 1
 var blue = [0, 0, 255, 1]; // Color -> blue -> 0
 var reader = MickyMorse();
@@ -32,7 +32,7 @@ It basically represents 0s 1s.
 
 ######Example
 
-```
+```javascript
 var red = [255, 0, 0, 1]; // Color -> red -> 1
 var blue = [0, 0, 255, 1]; // Color -> blue -> 0
 new MMData(red, blue, red, red, red); // The constructor accepts unlimited arguments, each representing piece of data
@@ -43,7 +43,7 @@ Morse code is composed of dots and dashes. Sequence of dots and dashes make up c
 
 Here's the __morse codes -> text__ map shipped by default:
 
-```
+```javascript
 this.codeMap = {
     "._": "a",
     "_...": "b",
