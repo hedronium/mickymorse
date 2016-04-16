@@ -1,5 +1,6 @@
 ##Micky Morse
 Micky Morse is a binary -> morse code -> text interpreter.
+
 Data is provided through a color based transmitter by default but can be made to read data from sound, radiowaves, etc.
 
 Data represents binary which is converted to morse code in the process and then finally text.
