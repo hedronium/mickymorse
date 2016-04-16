@@ -20,7 +20,7 @@ var reader = MickyMorse(new MMData(red, blue, red, red, red)); // Returns 'a'
 var red = [255, 0, 0, 1]; // Color -> red -> 1
 var blue = [0, 0, 255, 1]; // Color -> blue -> 0
 var reader = MickyMorse();
-reader.feed(new MMData(red));
+reader.feed(new MMData(red))
 	.feed(new MMData(blue, red, red, red)); // 'feed' injects data into the reader and can be chained as well
 reader.poop(); // Returns 'a'
 ```
