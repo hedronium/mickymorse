@@ -1,12 +1,12 @@
-##Micky Morse
+## Micky Morse
 Micky Morse is a binary -> morse code -> text interpreter.
 
 Data is provided through a [color based transmitter](http://eng1003.eng.monash.edu/apps/morsetransmitter) by default but can be made to read data from sound, radiowaves, etc.
 
 Data represents binary which is converted to morse code in the process and then finally text.
 
-##Usage
-######Constructor
+## Usage
+###### Constructor
 
 ```javascript
 var red = [255, 0, 0, 1]; // Color -> red -> 1
@@ -14,7 +14,7 @@ var blue = [0, 0, 255, 1]; // Color -> blue -> 0
 var reader = MickyMorse(new MMData(red, blue, red, red, red)); // Returns 'a'
 ```
 
-######Feed and Poop
+###### Feed and Poop
 
 ```javascript
 var red = [255, 0, 0, 1]; // Color -> red -> 1
@@ -25,12 +25,12 @@ reader.feed(new MMData(red))
 reader.poop(); // Returns 'a'
 ```
 
-##MMData
+## MMData
 MMData is an object holding the 'Micky Morse Data' which is usually passed onto Micky Morse Reader.
 
 It basically represents 0s 1s.
 
-######Example
+###### Example
 
 ```javascript
 var red = [255, 0, 0, 1]; // Color -> red -> 1
@@ -38,7 +38,7 @@ var blue = [0, 0, 255, 1]; // Color -> blue -> 0
 new MMData(red, blue, red, red, red); // The constructor accepts unlimited arguments, each representing piece of data
 ```
 
-##Morse Code Basics
+## Morse Code Basics
 Morse code is composed of dots and dashes. Sequence of dots and dashes make up characters. For example, 'a' is represened by a dot followed by a dash, "._".
 
 Here's the __morse codes -> text__ map shipped by default:
