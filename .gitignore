@@ -32,3 +32,7 @@ jspm_packages
 
 # Optional REPL history
 .node_repl_history
+
+mickymorse.sublime-project
+mickymorse.sublime-workspace
+docs

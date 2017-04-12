@@ -1,9 +1,9 @@
 ## Micky Morse
 Micky Morse is a binary -> morse code -> text interpreter.
 
-Data is provided through a [color based transmitter](http://eng1003.eng.monash.edu/apps/morsetransmitter) by default but can be made to read data from sound, radiowaves, etc.
+Binary data is, by default, provided through a [color based transmitter](http://eng1003.eng.monash.edu/apps/morsetransmitter). However, it is possible (indeed MickyMorse is designed to) to read binary data from sound, radiowaves, etc.
 
-Data represents binary which is converted to morse code in the process and then finally text.
+Data which is in binary form is converted to morse code. The morse code is later interpreted and converted to text, e.g. "Hello World".
 
 ## Usage
 ###### Constructor
@@ -17,8 +17,8 @@ var reader = MickyMorse(new MMData(red, blue, red, red, red)); // Returns 'a'
 ###### Feed and Poop
 
 ```javascript
-var red = [255, 0, 0, 1]; // Color -> red -> 1
-var blue = [0, 0, 255, 1]; // Color -> blue -> 0
+var red = [255, 0, 0, 1]; // Color "red" which is equivalent to 1.
+var blue = [0, 0, 255, 1]; // Color "blue" which is equivalent to 0.
 var reader = MickyMorse();
 reader.feed(new MMData(red))
 	.feed(new MMData(blue, red, red, red)); // 'feed' injects data into the reader and can be chained as well
@@ -26,16 +26,16 @@ reader.poop(); // Returns 'a'
 ```
 
 ## MMData
-MMData is an object holding the 'Micky Morse Data' which is usually passed onto Micky Morse Reader.
+MMData (Micky Morse Data) is an object representing the binary data. It is  passed onto Micky Morse Reader for interpretation.
 
-It basically represents 0s 1s.
+It can take communicative methods like color, sound, radiowaves, etc and interprets them as binary.
 
 ###### Example
 
 ```javascript
 var red = [255, 0, 0, 1]; // Color -> red -> 1
 var blue = [0, 0, 255, 1]; // Color -> blue -> 0
-new MMData(red, blue, red, red, red); // The constructor accepts unlimited arguments, each representing piece of data
+new MMData(red, blue, red, red, red); // The constructor accepts unlimited arguments, each representing a piece of data.
 ```
 
 ## Morse Code Basics
